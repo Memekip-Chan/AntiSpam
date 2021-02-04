@@ -19,4 +19,4 @@ This script attempts to address spam images that have captions inserted on one o
 * Calculate the average color of each of those regions
 * For each region, compare it to the average of all other regions. If it's different enough, flag the post as spam
 
-these sorts of spammers often times just use text on black background when inserting their captions, which makes this method somewhat effective against them
+these sorts of spammers often times just use text on black background along one of the borders when inserting their captions, which makes this method somewhat effective against them

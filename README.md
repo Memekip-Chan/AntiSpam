@@ -11,3 +11,12 @@ The problems being addressed by this script are:
 * Not everybody knows the syntax for removing based on crosspost title
 
 This addresses both of those things by allowing the user to paste the strange non-standard unicode part of a spam title into the script, then generates an automod rule that blocks posts with Regex that can successfully match that non-standard unicode text
+
+## spamByColor.py
+
+This script attempts to address spam images that have captions inserted on one of their borders. With this method, simple automoderator rules won't cut it, and some image processing needs to be done to detect it (although I am a bit wary of implementing something like this, for fear of recieving a malicious image from a spammer). The strategy this script takes is 
+* Divide an image into 5 regions: left border, right border, top border, bottom border, center
+* Calculate the average color of each of those regions
+* For each region, compare it to the average of all other regions. If it's different enough, flag the post as spam
+
+these sorts of spammers often times just use text on black background when inserting their captions, which makes this method somewhat effective against them

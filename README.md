@@ -6,7 +6,7 @@ Be sure to **evaluate these scripts for yourself** before deploying them long te
 
 ## title_rulegen.py
 
-The problems being addressed by this script are:
+The problems being addressed by this script are spammers who circumvent automoderator rules by using special unicode characters in titles within crossposts. This is a problem because:
 * In reddit's automod, whenever you try to post non-standard unicode characters into a rule, it errors out
 * Not everybody knows the syntax for removing based on crosspost title
 
